@@ -177,6 +177,9 @@ font-size: 26px;
     width: calc(100% / 2);
     position: relative;
     margin: 14px 7px 0 0;
+    &:hover{
+      opacity: 0.8;
+    }
     &:nth-child(5){
       margin-left: 7px;
       margin-right: 7px;
@@ -218,6 +221,9 @@ font-size: 26px;
     width: calc(100% / 4.2);
     position: relative;
     margin: 14px 7px 0 7px;
+    &:hover{
+      opacity: 0.8;
+    }
     &:nth-child(3){
        margin-left: 7px;
        margin-right: 0;
