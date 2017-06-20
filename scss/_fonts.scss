@@ -1,10 +1,59 @@
 @import "bourbon";
 
-@font-face("PFCentroSlabProBold", "fonts/PFCentroSlabProBold/PFCentroSlabProBold", $file-formats: eot woff ttf);
-@font-face("FuturaPTBold", "fonts/Futura/FuturaPTBold", $file-formats: otf);
-@font-face("FuturaPTLight", "fonts/Futura/FuturaPTLight", $file-formats: otf);
-@font-face("PFCentroSlabProMedium", "fonts/PFCentroSlabProMedium/PFCentroSlabProMedium", $file-formats: eot woff ttf);
-@font-face("RalewayBold", "fonts/RalewayBold/RalewayBold", $file-formats: eot woff ttf);
-@font-face("RalewayRegular", "fonts/RalewayRegular/RalewayRegular", $file-formats: eot woff ttf);
-@font-face("RalewaySemiBold", "fonts/RalewaySemiBold/RalewaySemiBold", $file-formats: eot woff ttf);
-@font-face("RobotoBold", "fonts/RobotoBold/RobotoBold", $file-formats: eot woff ttf);
+@font-face {
+  font-family: "PFCentroSlabProBold";
+  font-weight: bold;
+  font-style: normal;
+  src: url('fonts/PFCentroSlabProBold/PFCentroSlabProBold');
+  $format: 'eot', 'woff', 'ttf';
+}
+
+@font-face {
+    font-family: "FuturaPTBold";
+    font-weight: bold;
+    font-style: normal;
+    src: url('fonts/Futura/FuturaPTBold');
+    $format: 'otf';
+  }
+@font-face {
+    font-family: 'FuturaPTLight';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/Futura/FuturaPTLight');
+    $format: 'otf';
+  }
+@font-face{
+    font-family: 'PFCentroSlabProMedium';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/PFCentroSlabProMedium/PFCentroSlabProMedium');
+    $format: 'eot' 'woff' 'ttf';
+  }
+@font-face{
+  font-family: "RalewayBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/RalewayBold/RalewayBold");
+  $format: 'eot' 'woff' 'ttf';
+  }
+@font-face{
+  font-family: "RalewayRegular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/RalewayRegular/RalewayRegular");
+  $format: 'eot' 'woff' 'ttf';
+  }
+@font-face{
+  font-family: "RalewaySemiBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/RalewaySemiBold/RalewaySemiBold");
+  $format: 'eot' 'woff' 'ttf';
+  }
+@font-face{
+  font-family: "RobotoBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/RobotoBold/RobotoBold");
+  $format: 'eot' 'woff' 'ttf';
+  }
