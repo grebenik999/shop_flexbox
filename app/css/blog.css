@@ -1,0 +1,12 @@
+#blog__content {
+  width: 1370px;
+}
+
+#blog__content .main__slider_blog {
+  margin: 0 auto;
+}
+
+#blog__content .main__menu__blog {
+  position: relative;
+  top: 67%;
+}
