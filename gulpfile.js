@@ -6,6 +6,7 @@ var notify = require('gulp-notify');
 var csscomb = require('gulp-csscomb');
 var cssbeautify = require('gulp-cssbeautify');
 var gcmq = require('gulp-group-css-media-queries');
+var gulpStylelint = require('gulp-stylelint');
 
 
 
@@ -25,6 +26,17 @@ gulp.task('css', function() {
             openbrace: 'end-of-line',
             autosemicolon: true
         }))
+        .pipe(gulpStylelint({
+            reporters: [
+                {
+                    formatter: 'string',
+                    console: true
+                }
+            ]
+        }))
+        .on('error', notify.onError({
+            message: 'There is a CSS error, please look the console for details'
+        }))
         .pipe(gulp.dest('./app/css'));
 });
 
@@ -36,13 +48,15 @@ gulp.task('sass', function(){
         .pipe(csscomb())
         .pipe(gcmq())
         .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 gulp.task('watch', function(){
-    gulp.watch('scss/*.scss',['sass']);
-    gulp.watch('./app/js/*.js').on('change', browserSync.reload);
-    gulp.watch('./app/*.html').on('change', browserSync.reload);
+    gulp.watch('scss/*.scss',['sass']).on('change', browserSync.reload);
+    gulp.watch('app/js/*.js').on('change', browserSync.reload);
+    gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
